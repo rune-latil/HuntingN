@@ -1,0 +1,52 @@
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+
+body{
+    background: no-repeat center/cover url('/images/background.jpg');
+}
+
+section{
+    width: 40%;
+    margin: 40px auto;
+    background: rgba(245, 245, 245, 0.8);
+    border-radius: 10px;
+    text-align: center;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+h1{
+    margin-bottom: 20px;
+}
+
+.main{
+    img{ width:80%; }
+    p{ margin:20px auto; width: 80%; }
+    button{
+        padding:8px 14px;
+        border:1px solid #333;
+        background: white;
+        color:#333;
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover{opacity: 0.5;}
+    }
+
+}
+
+.result{
+    display: none;
+}
+
+.ending{
+    display: none;
+}
+
+@media screen and (max-width:1000px) {
+    section{
+        width:80%;
+    }
+}
