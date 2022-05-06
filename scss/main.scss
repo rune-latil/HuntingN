@@ -1,14 +1,28 @@
-*{
-    margin:0;
-    padding:0;
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+@font-face {
+    font-family: 'HeirofLightBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/HeirofLightBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* { 
+font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
-body{
+body {
     background: no-repeat center/cover url('/images/background.jpg');
+    
 }
 
-section{
+section {
     width: 40%;
     margin: 40px auto;
     background: rgba(245, 245, 245, 0.8);
@@ -18,35 +32,51 @@ section{
     box-sizing: border-box;
 }
 
-h1{
+h1 {
     margin-bottom: 20px;
+    font-family: 'HeirofLightBold';
 }
 
-.main{
-    img{ width:80%; }
-    p{ margin:20px auto; width: 80%; }
-    button{
-        padding:8px 14px;
-        border:1px solid #333;
-        background: white;
-        color:#333;
-        border-radius: 10px;
-        cursor: pointer;
-        &:hover{opacity: 0.5;}
+.main {
+    img {
+        width: 80%;
     }
 
+    p {
+        margin: 20px auto;
+        width: 80%;
+    }
+
+    button {
+        padding: 8px 14px;
+        border: 1px solid #333;
+        background: white;
+        color: #333;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+
+        &:hover {
+            background: #333;
+            color: white;
+        }
+    }
 }
 
-.result{
+.result {
     display: none;
 }
 
-.ending{
+.ending {
     display: none;
 }
 
-@media screen and (max-width:1000px) {
-    section{
-        width:80%;
+@media screen and (max-width: 1200px) {
+    body{
+        height: 100vh;
+    }
+    section {
+        width: 60%;
     }
 }
