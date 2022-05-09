@@ -12,8 +12,38 @@
   padding: 0;
   list-style: none; }
 
+/* animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes fadeOut {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+.fadeIn {
+  animation: fadeIn;
+  animation-duration: 0.5s; }
+
+.fadeOut {
+  animation: fadeOut;
+  animation-duration: 0.5s; }
+
 body {
-  background: no-repeat center/cover url("/images/background.jpg"); }
+  background: no-repeat center/cover url("/images/background.jpg");
+  min-height: 1000px; }
 
 section {
   width: 40%;
@@ -28,28 +58,28 @@ h1 {
   margin-bottom: 20px;
   font-family: 'HeirofLightBold'; }
 
-.main img {
+#main img {
   width: 80%; }
-.main p {
+#main p {
   margin: 20px auto;
   width: 80%; }
-.main button {
+#main button {
   padding: 8px 14px;
   border: 1px solid #333;
   background: white;
   color: #333;
   border-radius: 10px;
-  cursor: pointer;
   font-size: 16px;
-  font-weight: bold; }
-  .main button:hover {
+  font-weight: bold;
+  cursor: pointer; }
+  #main button:hover {
     background: #333;
     color: white; }
 
-.result {
+#qna {
   display: none; }
 
-.ending {
+#ending {
   display: none; }
 
 @media screen and (max-width: 1200px) {

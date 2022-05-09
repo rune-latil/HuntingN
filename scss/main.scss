@@ -17,8 +17,42 @@ font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, '
     list-style: none;
 }
 
+/* animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@-webkit-keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.fadeIn{
+    animation: fadeIn;
+    animation-duration: 0.5s;
+}
+
+.fadeOut{
+    animation: fadeOut; 
+    animation-duration: 0.5s;
+}
+
+
+
 body {
     background: no-repeat center/cover url('/images/background.jpg');
+    min-height: 1000px;
     
 }
 
@@ -37,7 +71,7 @@ h1 {
     font-family: 'HeirofLightBold';
 }
 
-.main {
+#main {
     img {
         width: 80%;
     }
@@ -53,9 +87,9 @@ h1 {
         background: white;
         color: #333;
         border-radius: 10px;
-        cursor: pointer;
         font-size: 16px;
         font-weight: bold;
+        cursor: pointer;
 
         &:hover {
             background: #333;
@@ -64,11 +98,11 @@ h1 {
     }
 }
 
-.result {
+#qna {
     display: none;
 }
 
-.ending {
+#ending {
     display: none;
 }
 
