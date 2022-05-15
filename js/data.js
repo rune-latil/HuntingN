@@ -50,7 +50,7 @@ const qnaList = [
   {
     q: '6. 조사하는 중 무언가 반짝이는 것을 발견했다.',
     a: [
-      { answer: 'a. 반짝이는 보석', type: [1] },
+      { answer: 'a. 반짝이는 세타케아의 목걸이', type: [1] },
       { answer: 'b. 세타케아의 귀걸이 한 짝', type: [2] },
       { answer: 'c. 검의 파편', type: [0] },
     ]

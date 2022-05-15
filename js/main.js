@@ -1,21 +1,29 @@
 const main = document.querySelector("#main");
 const qna = document.querySelector('#qna');
 const ending = document.querySelector('#ending');
+const endPoint = 11;
 
 function addAnswer(answerText, qIdx) {
     let a = document.querySelector('.answerBox');
     let answer = document.createElement('button');
-    answer.classList.add('answerList')
+    answer.classList.add('answerList');
+    answer.classList.add('.fadeIn');
     a.appendChild(answer);
     answer.innerHTML = answerText;
 
     answer.addEventListener("click", function () {
         let children = document.querySelectorAll('.answerList');
-        for (let i = 0; i < children.length; i++) {
-            children[i].disabled = true;
-            children[i].style.display = 'none';
-        }
-        goNext(++qIdx);
+        qna.style.webkitAnimation = 'fadeOut 1s';
+        qna.style.Animation = 'fadeOut 1s';
+
+        setTimeout(() => {
+            qna.style.webkitAnimation = 'fadeIn 2s';
+            qna.style.Animation = 'fadeIn 2s';
+            for (let i = 0; i < children.length; i++) {
+                children[i].style.display = 'none';
+            }
+            goNext(++qIdx);
+        }, 450)
     }, false);
 }
 
@@ -27,6 +35,9 @@ function goNext(qIdx) {
     for (let i in qnaList[qIdx].a) {
         addAnswer(qnaList[qIdx].a[i].answer, qIdx);
     }
+
+    let status = document.querySelector('.statusBar');
+    status.style.width = (100 / endPoint) * (qIdx + 1) + '%';
 
 }
 
