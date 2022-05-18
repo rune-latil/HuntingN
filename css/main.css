@@ -110,6 +110,17 @@ button {
 #ending {
   display: none; }
 
+.endingImg {
+  margin-bottom: 40px; }
+  .endingImg img {
+    width: 100%; }
+
+.endingName {
+  margin-bottom: 20px; }
+
+.endingDesc {
+  margin-bottom: 40px; }
+
 @media screen and (max-width: 1200px) {
   body {
     height: 100vh; }

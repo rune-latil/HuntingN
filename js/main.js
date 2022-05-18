@@ -9,6 +9,26 @@ function calResult() {
     return result;
 }
 
+function setResult() {
+    let point = calResult();
+    const endingImg = document.querySelector('.endingImg');
+    let imgEnding = document.createElement('img');
+    let imgURL = 'images/ending' + point + '.png';
+    imgEnding.src = imgURL;
+    imgEnding.alt = point;
+
+    endingImg.appendChild(imgEnding);
+
+    const endingName = document.querySelector('.endingName');
+    const endingDesc = document.querySelector('.endingDesc');
+
+    endingName.innerHTML = infoList[point].name;
+    endingDesc.innerHTML = infoList[point].desc;
+
+    console.log(point);
+
+}
+
 function goResult() {
     qna.style.webkitAnimation = 'fadeOut 1s';
     qna.style.Animation = 'fadeOut 1s';
@@ -21,8 +41,7 @@ function goResult() {
             ending.style.display = 'block';
         }, 450)
     })
-
-    console.log(select);
+    setResult();
 }
 
 function addAnswer(answerText, qIdx, idx) {
@@ -41,7 +60,12 @@ function addAnswer(answerText, qIdx, idx) {
         setTimeout(() => {
             qna.style.webkitAnimation = 'fadeIn 2s';
             qna.style.Animation = 'fadeIn 2s';
-            select[qIdx] = idx;
+
+            let target = qnaList[qIdx].a[idx].type;
+            for (let i = 0; i < target.length; i++) {
+                select[target[i]] += 1;
+            }
+
             for (let i = 0; i < children.length; i++) {
                 children[i].style.display = 'none';
             }
