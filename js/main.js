@@ -108,3 +108,10 @@ function start() {
     })
 
 }
+
+/* 트위터 공유 */
+function shareTwitter() {
+    var sendText = "니사의 사냥대회"; // 전달할 텍스트
+    var sendUrl = "https://wefershuntingn.netlify.app/"; // 전달할 URL
+    window.open("https://twitter.com/intent/tweet?text=" + sendText + "&url=" + sendUrl);
+}
