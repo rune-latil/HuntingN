@@ -109,15 +109,13 @@ function start() {
 
 }
 
-function setShare() {
+
+/* 트위터 공유 */
+function shareTwitter() {
     let resultImg = document.querySelector('.endingImg');
     let resultAlt = resultImg.firstElementChild.alt;
 
-    /* 트위터 공유 */
-    function shareTwitter() {
-        let sendText = "니사의 사냥대회 Ending"; // 전달할 텍스트
-        let sendUrl = "https://wefershuntingn.netlify.app/page/ending"; // 전달할 URL
-        window.open("https://twitter.com/intent/tweet?text=" + sendText + "&url=" + sendUrl + resultAlt + '.html');
-    }
+    let sendText = "니사의 사냥대회 Ending"; // 전달할 텍스트
+    let sendUrl = "https://wefershuntingn.netlify.app/page/ending"; // 전달할 URL
+    window.open("https://twitter.com/intent/tweet?text=" + sendText + "&url=" + sendUrl + resultAlt + '.html');
 }
-
