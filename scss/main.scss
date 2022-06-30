@@ -143,7 +143,10 @@ button {
 }
 
 .endingImg{
-    img{width:100%;}
+    img{
+        width:100%;
+        border-radius: 20px;
+    }
     margin-bottom:40px;
 }
 
